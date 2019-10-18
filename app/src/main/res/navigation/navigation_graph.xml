@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/giannaFragment">
+
+    <fragment
+        android:id="@+id/giannaFragment"
+        android:name="muchbeer.raum.navigianna.ui.gianna.GiannaFragment"
+        android:label="gianna_fragment"
+        tools:layout="@layout/gianna_fragment" >
+        <action
+            android:id="@+id/action_giannaFragment_to_gadielFragment"
+            app:destination="@id/gadielFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/gadielFragment"
+        android:name="muchbeer.raum.navigianna.GadielFragment"
+        android:label="fragment_gadiel"
+        tools:layout="@layout/fragment_gadiel" >
+        <argument
+            android:name="userName"
+            app:argType="string"
+            android:defaultValue="No name added" />
+    </fragment>
+</navigation>
